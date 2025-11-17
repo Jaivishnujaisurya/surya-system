@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sample Report - Surya Diagnostics</title>
+  <style>
+    body { font-family: Arial, sans-serif; background:#eef2f7; margin:0; padding:20px; }
+    .container { max-width:800px; margin:auto; }
+    .card { background:#fff; padding:18px; border-radius:10px; box-shadow:0 2px 6px rgba(0,0,0,0.08); }
+    h1 { text-align:center; margin:0 0 12px 0; }
+    table { width:100%; border-collapse:collapse; margin-top:12px; }
+    th, td { border:1px solid #ddd; padding:8px; text-align:left; }
+    th { background:#f2f2f2; }
+    .qr { text-align:center; margin-top:16px; }
+    .btn { display:inline-block; padding:10px 14px; border-radius:8px; background:#007bff; color:#fff; text-decoration:none; margin-top:12px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <h1>SURYA DIAGNOSTICS</h1>
+      <p><strong>Patient:</strong> Ramu Kumar</p>
+      <p><strong>Order #:</strong> SURYA-123456789</p>
+
+      <table>
+        <thead>
+          <tr><th>Test</th><th>Result</th><th>Reference Range</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>HB</td><td>13.5 g/dL</td><td>13 - 17</td></tr>
+          <tr><td>WBC</td><td>6.4 x10^3/µL</td><td>4 - 11</td></tr>
+          <tr><td>Platelets</td><td>250 x10^3/µL</td><td>150 - 450</td></tr>
+          <tr><td>Glucose (F)</td><td>95 mg/dL</td><td>70 - 99</td></tr>
+        </tbody>
+      </table>
+
+      <div class="qr">
+        <p>Scan QR to view report online:</p>
+        <!-- demo QR image (static). After backend ready we'll replace with real QR link -->
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://example.com/r/DEMO-TOKEN" alt="QR">
+      </div>
+
+      <div style="text-align:center;">
+        <a class="btn" href="index.html">Back to Dashboard</a>
+        <a class="btn" href="#" onclick="window.print();">Print / Save PDF</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
