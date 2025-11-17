@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Patient - Surya Diagnostics</title>
+    <style>
+        body {
+            background: #eef2f7;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 90%;
+            margin: auto;
+            padding: 20px;
+        }
+        h2 {
+            text-align: center;
+            color: #000;
+        }
+        .card {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        input, button {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border: 1px solid #aaa;
+        }
+        button {
+            background: #007bff;
+            color: white;
+            border: none;
+            font-size: 17px;
+            font-weight: bold;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Create Patient</h2>
+
+    <div class="card">
+        <input type="text" id="pname" placeholder="Patient Name">
+        <input type="number" id="page" placeholder="Age">
+        <input type="text" id="pgender" placeholder="Gender">
+        <input type="number" id="pphone" placeholder="Phone Number">
+        <input type="text" id="ptest" placeholder="Test Name">
+
+        <button onclick="savePatient()">Save Patient</button>
+    </div>
+</div>
+
+<script>
+function savePatient() {
+    let name = document.getElementById("pname").value;
+    let age = document.getElementById("page").value;
+    let gender = document.getElementById("pgender").value;
+    let phone = document.getElementById("pphone").value;
+    let test = document.getElementById("ptest").value;
+
+    if (name === "" || age === "" || gender === "" || phone === "" || test === "") {
+        alert("Please fill all fields");
+        return;
+    }
+
+    alert("Patient saved successfully!");
+
+    window.location.href = "sample-report.html";
+}
+</script>
+
+</body>
+</html>
